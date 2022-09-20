@@ -7,18 +7,17 @@ import * as Styled from './styles';
 import { PokemonsTypes } from '../PokemonsTypes';
 import { PokemonName } from '../PokemonName';
 
-export function PokemonCard({ urlPokemon }) {
+export function PokemonCard({ urlPokemon, idx }) {
   const [data, setData] = useState({});
   useEffect(() => {
     const func = async () => {
-      const value = await axios(urlPokemon);
+      const value = await axios.get(urlPokemon);
       setData(value.data);
     };
     func();
   }, [urlPokemon]);
   const {
     name = '',
-    order,
     sprites: {
       versions: {
         'generation-v': {
@@ -35,7 +34,7 @@ export function PokemonCard({ urlPokemon }) {
       <Styled.ImageContainer>
         <Image src={frontImg} width="150" height="150" alt="" />
       </Styled.ImageContainer>
-      <PokemonName name={name} order={order} />
+      <PokemonName name={name} order={idx} />
       <PokemonsTypes types={types} />
     </Styled.Container>
   );
@@ -43,4 +42,5 @@ export function PokemonCard({ urlPokemon }) {
 
 PokemonCard.propTypes = {
   urlPokemon: P.string.isRequired,
+  idx: P.number.isRequired,
 };

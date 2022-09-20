@@ -9,7 +9,7 @@ export const theme = {
           transform: translateY(-5px)
         }
         75% {
-          transform: translateY(3px)
+          transform: translateY(1px)
         }
         100%{
           transform: translateY(0)

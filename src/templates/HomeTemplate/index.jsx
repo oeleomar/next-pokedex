@@ -6,12 +6,8 @@ export function HomeTemplate({ data }) {
   return (
     <Styled.Container>
       <Styled.PokemonContainer>
-        {data.map((pokemon) => (
-          <PokemonCard
-            key={pokemon.name}
-            pokemon={pokemon.name}
-            urlPokemon={pokemon.url}
-          />
+        {data.map((pokemon, idx) => (
+          <PokemonCard key={pokemon.name} urlPokemon={pokemon.url} idx={idx} />
         ))}
       </Styled.PokemonContainer>
     </Styled.Container>
