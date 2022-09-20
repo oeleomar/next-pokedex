@@ -12,6 +12,7 @@ export const GlobalStyles = createGlobalStyle`
   }
   body {
     font-family: 'Inter', sans-serif;
+    background: url(https://assets.pokemon.com/static2/_ui/img/chrome/body_bg.png);
   }
 
   h1, h2, h3, h4, h5, h6 {

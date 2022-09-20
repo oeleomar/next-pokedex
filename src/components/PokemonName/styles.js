@@ -25,5 +25,6 @@ export const Name = styled.h3`
     text-transform: capitalize;
     margin: 1rem 0;
     margin-bottom: 0.5rem;
+    color: #313131;
   `}
 `;

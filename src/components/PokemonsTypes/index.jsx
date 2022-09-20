@@ -5,7 +5,9 @@ export function PokemonsTypes({ types }) {
   return (
     <Styled.Container>
       {types.map((type) => (
-        <span key={type.type.name}>{type.type.name}</span>
+        <Styled.SpanTypes key={type.type.name} type={type}>
+          {type.type.name}
+        </Styled.SpanTypes>
       ))}
     </Styled.Container>
   );
