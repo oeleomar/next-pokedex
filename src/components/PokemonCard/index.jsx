@@ -32,7 +32,9 @@ export function PokemonCard({ urlPokemon }) {
   } = data;
   return (
     <Styled.Container>
-      <Image src={frontImg} width="200" height="200" alt="" />
+      <Styled.ImageContainer>
+        <Image src={frontImg} width="150" height="150" alt="" />
+      </Styled.ImageContainer>
       <PokemonName name={name} order={order} />
       <PokemonsTypes types={types} />
     </Styled.Container>
