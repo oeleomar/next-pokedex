@@ -7,6 +7,43 @@ export const Container = styled.div`
     max-width: 120rem;
     width: 100%;
     margin: 0 auto;
+
+    > header {
+      background: #313131;
+      min-height: 16rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    > header input {
+      height: 5rem;
+      width: 60%;
+      border-radius: 5px;
+      border: 3px #616161 solid;
+      line-height: 1.5;
+      padding: 0.5em 0;
+      text-indent: 0.5em;
+      font-family: inherit;
+      font-size: 18px;
+      color: #313131;
+    }
+
+    > header button {
+      background-color: #ee6b2f;
+      border: none;
+      border-radius: 5px;
+      width: 5rem;
+      height: 5rem;
+      margin-left: 2rem;
+      color: white;
+      cursor: pointer;
+      transition: all 0.2s ease-in-out;
+    }
+
+    > header button:hover {
+      background: #da471b;
+    }
   `}
 `;
 

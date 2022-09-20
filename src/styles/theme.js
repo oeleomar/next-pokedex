@@ -26,7 +26,7 @@ export const theme = {
       water: '#4592c4',
       bug: '#729f3f',
       normal: '#a4acaf',
-      eletric: '#eed535',
+      electric: '#eed535',
       ground: 'linear-gradient(180deg, #f7de3f 50%, #ab9842 50%)',
       fairy: '#fdb9e9',
       fighting: '#d56723',
