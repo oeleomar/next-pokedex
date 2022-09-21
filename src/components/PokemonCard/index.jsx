@@ -33,14 +33,10 @@ export function PokemonCard({ urlPokemon, idx }) {
     types = [],
   } = data;
 
-  function searchPokemonStats() {
-    console.log(data);
-  }
-
   return (
     <Dialog.Root>
       <Dialog.Trigger>
-        <Styled.Container onClick={() => searchPokemonStats(name)}>
+        <Styled.Container>
           <Styled.ImageContainer className="bg-black">
             <Image src={frontImg} width="150" height="150" alt="" />
           </Styled.ImageContainer>
@@ -53,7 +49,7 @@ export function PokemonCard({ urlPokemon, idx }) {
         <Dialog.Overlay className="bg-black/60 inset-0 fixed" />
         <Dialog.Content className="fixed bg-white py-8 px-10 text-zinc-900 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-lg  shadow-lg shadow-black/25">
           <Dialog.Title className="text-4xl text-center mb-9">
-            {data.name.charAt(0).toUpperCase() + name.slice(1)}{' '}
+            {data.name ? data.name.charAt(0).toUpperCase() + name.slice(1) : ''}{' '}
             <span className="text-zinc-500">
               {idx <= 9 ? `Nº00${idx}` : idx <= 99 ? `Nº0${idx}` : `Nº${idx}`}
             </span>
