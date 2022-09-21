@@ -12,6 +12,7 @@ export function HomeTemplate({ data }) {
           <MagnifyingGlass size={32} />
         </button>
       </header>
+
       <Styled.PokemonContainer>
         {data.map((pokemon, idx) => (
           <PokemonCard key={pokemon.name} urlPokemon={pokemon.url} idx={idx} />

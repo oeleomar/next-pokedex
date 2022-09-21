@@ -5,6 +5,7 @@ export const Container = styled.div`
     border-radius: 8px;
     padding: 1rem;
     margin-bottom: 50px;
+    cursor: pointer;
 
     :hover {
       animation: 0.3s shake;

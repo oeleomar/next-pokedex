@@ -1,6 +1,7 @@
 import P from 'prop-types';
 import { ThemeProvider } from 'styled-components';
 import { GlobalStyles } from '../styles/global-styles';
+import '../styles/main.css';
 import { theme } from '../styles/theme';
 
 function MyApp({ Component, pageProps }) {
